@@ -1,0 +1,27 @@
+{
+  "name": "@codename/test",
+  "version": "0.1.0",
+  "description": "Testing stack based on Gauge & Testcafe.",
+  "keywords": [
+    "test",
+    "gauge",
+    "testcafe"
+  ],
+  "author": "Arnaud Leymet <arnaud@codename.co>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codename-co/test.git"
+  },
+  "scripts": {
+    "postinstall": "echo ██ Please install the gauge cli - see https://gauge.org/get_started/",
+    "start": "yarn test",
+    "test": "gauge run specs/"
+  },
+  "dependencies": {
+    "testcafe": "^0.22.0"
+  },
+  "engines": {
+    "node": ">=8"
+  }
+}
