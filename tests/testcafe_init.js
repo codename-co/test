@@ -12,7 +12,7 @@ function createTestFile () {
 function runTest () {
   let runner = null
 
-  createTestCafe('localhost', 1337, 1338)
+  createTestCafe('localhost', 1332, 1333)
     .then((tc) => {
       testcafe = tc
       runner = tc.createRunner()
@@ -20,9 +20,11 @@ function runTest () {
       return runner
         .src('./test.js')
         .browsers('chrome')
+        // .browsers('puppeteer')
+        // .reporter('json')
         .run()
         .catch((error) => {
-          console.log(error)
+          console.error(error)
         })
     })
     .then((report) => {
